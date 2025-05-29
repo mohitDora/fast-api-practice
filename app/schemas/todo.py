@@ -16,6 +16,7 @@ class TodoUpdate(TodoBase):
 
 class TodoOut(TodoBase):
     id: int = Field(..., description="The unique identifier of the todo item")
+    user_id: int = Field(..., description="The unique identifier of the owner of the todo item")
     
     class Config:
         from_attributes = True
